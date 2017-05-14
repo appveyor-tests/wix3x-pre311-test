@@ -5,8 +5,8 @@ init:
 assembly_info:
   patch: true
 
-build:
-  verbosity: minimal
+build_script:
+- msbuild MySimpleApp.sln /verbosity:minimal /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
 artifacts:
   - path: '**\*.msi'
